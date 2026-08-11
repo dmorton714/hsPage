@@ -6,7 +6,8 @@ import MainPage from './components/MainPage.vue'
 const routes = [
   {
     path: '/',
-    redirect: '/signup',
+    name: 'home',
+    component: MainPage,
   },
   {
     path: '/signup',
