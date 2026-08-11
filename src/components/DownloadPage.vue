@@ -250,10 +250,12 @@ onBeforeUnmount(() => {
 
 .hero-stack {
   width: min(980px, calc(100% - 72px));
+  min-height: calc(100svh - 48px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .conference-logo {
@@ -265,6 +267,8 @@ onBeforeUnmount(() => {
 .hero-content {
   box-sizing: border-box;
   width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
   padding: clamp(24px, 4vw, 44px);
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -327,6 +331,9 @@ h2 {
 }
 
 h1 {
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
   font-size: clamp(2.05rem, 4.8vw, 4.25rem);
   font-weight: 1000;
 }
@@ -1023,6 +1030,7 @@ h2 {
 
   .hero-stack {
     width: min(calc(100% - 28px), 420px);
+    min-height: calc(100svh - 74px);
   }
 
   .conference-logo {
