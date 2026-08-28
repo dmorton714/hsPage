@@ -10,6 +10,10 @@ defineProps({
     type: Array,
     required: true,
   },
+  label: {
+    type: String,
+    default: undefined,
+  },
   level: {
     type: Number,
     default: 2,
@@ -68,6 +72,7 @@ onBeforeUnmount(() => {
     :style="{ '--title-progress': progress }"
     :aria-label="lines.join('. ')"
   >
+    <p v-if="label" class="animated-title-label">{{ label }}</p>
     <component
       :is="`h${level}`"
       v-for="(line, index) in lines"
@@ -89,7 +94,21 @@ onBeforeUnmount(() => {
   gap: 0.12em;
   width: min(1240px, 100%);
   margin-bottom: 24px;
+  padding: clamp(18px, 4vw, 42px);
+  border-radius: 8px;
+  background: var(--hs-dark-orange);
   overflow: visible;
+}
+
+.animated-title-label {
+  width: fit-content;
+  margin: 0 0 0.45em;
+  color: var(--hs-grey);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .animated-title-line {
@@ -99,6 +118,7 @@ onBeforeUnmount(() => {
   --line-ease: calc(1 - (1 - var(--line-progress)) * (1 - var(--line-progress)) * (1 - var(--line-progress)));
   margin: 0;
   max-width: none;
+  color: var(--hs-dark-blue);
   opacity: var(--line-ease);
   filter: blur(calc((1 - var(--line-ease)) * 8px));
   transform: translateX(calc((1 - var(--line-ease)) * var(--line-direction) * 115vw));

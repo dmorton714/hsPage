@@ -5,9 +5,9 @@ import AnimatedTitle from './AnimatedTitle.vue'
 <template>
   <section id="process" class="page-section" aria-labelledby="process-title">
     <div class="section-inner">
-      <p class="section-label">How It Works</p>
       <AnimatedTitle
         id="process-title"
+        label="How It Works"
         :lines="['From Registration', 'To Retouched Headshot', 'In Minutes']"
       />
       <div class="process-steps">
@@ -48,6 +48,7 @@ import AnimatedTitle from './AnimatedTitle.vue'
           </p>
         </article>
       </div>
+      <h3 class="perks-heading">Perks of Using Us</h3>
       <ul class="compact-list">
         <li>No waiting several days</li>
         <li>No wondering which image the photographer chose</li>

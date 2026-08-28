@@ -10,6 +10,7 @@ const links = [
   { href: '#process', label: 'How It Works' },
   { href: '#sponsors', label: 'Sponsors' },
   { href: '#why-us', label: 'Why Us' },
+  { href: '#pricing', label: 'Pricing' },
   { href: '#book-now', label: 'Book Now' },
 ]
 

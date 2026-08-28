@@ -5,10 +5,10 @@ import AnimatedTitle from './AnimatedTitle.vue'
 <template>
   <section id="book-now" class="page-section" aria-labelledby="book-now-title">
     <div class="section-inner">
-      <p class="section-label">Book Now</p>
       <AnimatedTitle
         id="book-now-title"
-        :lines="['Book a Headshot Activation']"
+        label="Book Now"
+        :lines="['Book us for your event']"
       />
       <form class="contact-form">
         <label>

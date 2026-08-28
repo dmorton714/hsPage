@@ -5,6 +5,7 @@ import AnimatedTitle from './AnimatedTitle.vue'
 <template>
   <section id="hero" class="page-section hero-section" aria-labelledby="hero-title">
     <div class="section-inner">
+      <p class="company-name">Headshot Guys</p>
       <AnimatedTitle
         id="hero-title"
         :level="1"
