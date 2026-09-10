@@ -1,6 +1,8 @@
 <script setup>
 import AnimatedTitle from './AnimatedTitle.vue'
 
+const publicAssetPath = (path) => `${import.meta.env.BASE_URL}${path}`
+
 const headshotThumbnails = [
   '1.jpg',
   '2.jpg',
@@ -18,7 +20,7 @@ const headshotThumbnails = [
   '14.jpg',
   'Ferdinand_Keith_914--0011.jpg',
   'Wilemon_Katherine_689--0010.jpg',
-].map((fileName) => `/hsSm/JPEG/${fileName}`)
+].map((fileName) => publicAssetPath(`hsSm/JPEG/${fileName}`))
 </script>
 
 <template>
