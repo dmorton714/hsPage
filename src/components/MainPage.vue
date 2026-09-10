@@ -1079,6 +1079,7 @@ dd {
   }
 
   .what-we-do-headshot {
+    min-height: auto;
     max-height: 360px;
   }
 
