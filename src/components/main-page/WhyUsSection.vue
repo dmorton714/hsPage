@@ -1,5 +1,11 @@
 <script setup>
 import AnimatedTitle from './AnimatedTitle.vue'
+
+const publicAssetPath = (path) => `${import.meta.env.BASE_URL}${path}`
+
+const cameraIcon = publicAssetPath('camera-outline.svg')
+const schoolIcon = publicAssetPath('school-outline.svg')
+const stopwatchIcon = publicAssetPath('stopwatch-outline.svg')
 </script>
 
 <template>
@@ -18,15 +24,36 @@ import AnimatedTitle from './AnimatedTitle.vue'
 
         <div class="proof-strip" aria-label="Experience proof points">
           <article>
-            <strong>40+</strong>
+            <div class="stat-value">
+              <strong>40+</strong>
+              <span
+                class="stat-icon"
+                :style="{ '--stat-icon-url': `url(${cameraIcon})` }"
+                aria-hidden="true"
+              ></span>
+            </div>
             <span>Years of professional photography experience</span>
           </article>
           <article>
-            <strong>30+</strong>
+            <div class="stat-value">
+              <strong>30+</strong>
+              <span
+                class="stat-icon"
+                :style="{ '--stat-icon-url': `url(${schoolIcon})` }"
+                aria-hidden="true"
+              ></span>
+            </div>
             <span>Years in conference and event spaces</span>
           </article>
           <article>
-            <strong>Minutes</strong>
+            <div class="stat-value">
+              <strong>Minutes</strong>
+              <span
+                class="stat-icon"
+                :style="{ '--stat-icon-url': `url(${stopwatchIcon})` }"
+                aria-hidden="true"
+              ></span>
+            </div>
             <span>To finished headshot delivery in most cases</span>
           </article>
         </div>

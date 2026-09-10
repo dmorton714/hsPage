@@ -23,7 +23,7 @@ import AnimatedTitle from './AnimatedTitle.vue'
             </p>
             <img
               class="what-we-do-headshot"
-              src="/hsSm/JPEG/Ferdinand_Keith_914--0011.jpg"
+              src="/Ferdinand_Keith_600.jpg"
               alt="Professional headshot sample"
               loading="lazy"
             >

@@ -143,6 +143,23 @@ onMounted(() => {
   padding-block: 24px 52px;
 }
 
+.hero-copy {
+  max-width: 920px;
+  min-width: 0;
+}
+
+.hero-video {
+  width: 100%;
+  max-height: 520px;
+  margin-top: 28px;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(23, 35, 40, 0.36);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+  object-fit: cover;
+}
+
 .company-name {
   margin: 0 0 18px;
   color: var(--hs-paper);
@@ -150,7 +167,6 @@ onMounted(() => {
   font-weight: 900;
   letter-spacing: 0;
   line-height: 0.92;
-  text-transform: lowercase;
 }
 
 .section-label {
@@ -306,16 +322,29 @@ dd + dt {
 .who-we-are-stats article {
   display: grid;
   align-content: space-between;
+  justify-items: center;
   min-height: 150px;
   padding: 20px;
   border-radius: 8px;
   background: var(--hs-dark-blue);
   color: var(--hs-paper);
   box-shadow: var(--hs-shadow);
+  text-align: center;
 }
 
 .who-we-are-stats article:nth-child(2) {
   background: var(--hs-dark-orange);
+}
+
+.who-we-are-stats .stat-value {
+  justify-content: center;
+}
+
+.stat-value {
+  display: flex;
+  gap: clamp(10px, 1.6vw, 18px);
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .who-we-are-stats strong {
@@ -325,7 +354,16 @@ dd + dt {
   line-height: 0.85;
 }
 
-.who-we-are-stats span {
+.stat-icon {
+  width: clamp(56px, 7vw, 92px);
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  background: rgba(255, 255, 255, 0.82);
+  -webkit-mask: var(--stat-icon-url) center / contain no-repeat;
+  mask: var(--stat-icon-url) center / contain no-repeat;
+}
+
+.who-we-are-stats article > span {
   max-width: 220px;
   font-weight: 900;
   line-height: 1.1;
@@ -758,11 +796,17 @@ dd + dt {
   min-height: 132px;
   display: grid;
   align-content: space-between;
+  justify-items: center;
   padding: 20px;
   border-radius: 8px;
   background: var(--hs-dark-blue);
   color: var(--hs-paper);
   box-shadow: var(--hs-shadow);
+  text-align: center;
+}
+
+.proof-strip .stat-value {
+  justify-content: center;
 }
 
 .proof-strip article:nth-child(2) {
@@ -955,8 +999,17 @@ dd {
     padding: 58px 18px;
   }
 
+  .hero-section.page-section {
+    padding-top: 20px;
+  }
+
   .hero-section .section-inner {
-    padding-block: 54px 42px;
+    padding-block: 12px 42px;
+  }
+
+  .hero-video {
+    max-height: none;
+    margin-top: 22px;
   }
 
   .contact-form {
@@ -994,6 +1047,10 @@ dd {
   .book-now-layout,
   .what-we-do-layout {
     grid-template-columns: 1fr;
+  }
+
+  .stat-value {
+    justify-content: flex-start;
   }
 
   .experience-pillars,

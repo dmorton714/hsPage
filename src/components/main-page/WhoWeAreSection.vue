@@ -3,6 +3,9 @@ import AnimatedTitle from './AnimatedTitle.vue'
 
 const publicAssetPath = (path) => `${import.meta.env.BASE_URL}${path}`
 
+const cameraIcon = publicAssetPath('camera-outline.svg')
+const peopleIcon = publicAssetPath('people-outline.svg')
+
 const headshotThumbnails = [
   '1.jpg',
   '2.jpg',
@@ -46,11 +49,25 @@ const headshotThumbnails = [
 
           <div class="who-we-are-stats" aria-label="Team experience">
             <article>
-              <strong>40+</strong>
+              <div class="stat-value">
+                <strong>40+</strong>
+                <span
+                  class="stat-icon"
+                  :style="{ '--stat-icon-url': `url(${cameraIcon})` }"
+                  aria-hidden="true"
+                ></span>
+              </div>
               <span>Years behind the camera</span>
             </article>
             <article>
-              <strong>30+</strong>
+              <div class="stat-value">
+                <strong>30+</strong>
+                <span
+                  class="stat-icon"
+                  :style="{ '--stat-icon-url': `url(${peopleIcon})` }"
+                  aria-hidden="true"
+                ></span>
+              </div>
               <span>Years in conferences and events</span>
             </article>
           </div>
