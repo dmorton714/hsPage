@@ -462,6 +462,7 @@ dd + dt {
 
 .what-we-do-headshot {
   width: 100%;
+  min-width: 0;
   min-height: 100%;
   aspect-ratio: 4 / 5;
   border-radius: 8px;
