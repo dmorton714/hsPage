@@ -143,9 +143,26 @@ onMounted(() => {
   padding-block: 24px 52px;
 }
 
+.hero-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 0.67fr) minmax(300px, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
 .hero-copy {
   max-width: 920px;
   min-width: 0;
+}
+
+.hero-photo {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
 }
 
 .hero-video {
@@ -1046,8 +1063,15 @@ dd {
   .who-we-are-panel,
   .process-perks-layout,
   .book-now-layout,
-  .what-we-do-layout {
+  .what-we-do-layout,
+  .hero-columns {
     grid-template-columns: 1fr;
+  }
+
+  .hero-photo {
+    min-height: auto;
+    max-height: 360px;
+    margin-top: 4px;
   }
 
   .stat-value {
