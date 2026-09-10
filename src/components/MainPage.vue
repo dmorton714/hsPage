@@ -148,6 +148,7 @@ onMounted(() => {
   grid-template-columns: minmax(0, 0.67fr) minmax(300px, 1fr);
   gap: 24px;
   align-items: stretch;
+  margin-top: 16px;
 }
 
 .hero-copy {
