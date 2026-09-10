@@ -16,10 +16,18 @@ import AnimatedTitle from './AnimatedTitle.vue'
             We provide professional, on-site headshot photography designed specifically for conferences, conventions,
             trade shows, corporate meetings, and sponsored activations.
           </p>
-          <p>
-            Your organization gets a turnkey headshot activation that adds real value to the attendee experience while
-            creating a destination people actively want to visit.
-          </p>
+          <div class="what-we-do-feature">
+            <p>
+              Your organization gets a turnkey headshot activation that adds real value to the attendee experience while
+              creating a destination people actively want to visit.
+            </p>
+            <img
+              class="what-we-do-headshot"
+              src="/hsSm/JPEG/Ferdinand_Keith_914--0011.jpg"
+              alt="Professional headshot sample"
+              loading="lazy"
+            >
+          </div>
         </div>
 
         <div class="attendee-receives">

@@ -92,7 +92,8 @@ onBeforeUnmount(() => {
 .animated-title {
   display: grid;
   gap: 0.12em;
-  width: min(1240px, 100%);
+  box-sizing: border-box;
+  width: 100%;
   margin-bottom: 24px;
   padding: clamp(18px, 4vw, 42px);
   border-radius: 8px;

@@ -48,14 +48,27 @@ import AnimatedTitle from './AnimatedTitle.vue'
           </p>
         </article>
       </div>
-      <h3 class="perks-heading">Perks of Using Us</h3>
-      <ul class="compact-list">
-        <li>No waiting several days</li>
-        <li>No wondering which image the photographer chose</li>
-        <li>No complicated delivery process</li>
-        <li>Just a professional headshot ready to use</li>
-        <li>No hidden fees</li>
-      </ul>
+      <div class="process-perks-layout">
+        <div>
+          <h3 class="perks-heading">Perks of Using Us</h3>
+          <ul class="compact-list">
+            <li>No waiting several days</li>
+            <li>No wondering which image the photographer chose</li>
+            <li>No complicated delivery process</li>
+            <li>Just a professional headshot ready to use</li>
+            <li>No hidden fees</li>
+          </ul>
+        </div>
+        <video
+          class="process-booth-video"
+          src="/sm_booth%20-%20SD%20480p.mov"
+          autoplay
+          muted
+          loop
+          playsinline
+          aria-label="Headshot booth setup in action"
+        />
+      </div>
     </div>
   </section>
 </template>
